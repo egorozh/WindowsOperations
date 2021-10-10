@@ -1,0 +1,17 @@
+<Project>
+	<PropertyGroup>
+		<TargetFrameworks>net5.0-windows;net6.0-windows</TargetFrameworks>
+
+		<Nullable>Enable</Nullable>
+		<LangVersion>Latest</LangVersion>
+
+		<UseWPF>true</UseWPF>
+
+		<Version>0.2.6</Version>
+
+		<Company>X-Filer</Company>
+		<Product>X-Filer</Product>
+		<Authors>Egorozh</Authors>
+		
+	</PropertyGroup>
+</Project>
