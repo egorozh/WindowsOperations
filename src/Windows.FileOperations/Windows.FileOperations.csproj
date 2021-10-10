@@ -1,8 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-
+		<Description>File operations for Windows</Description>
+		<PackageId>Egorozh.Windows.FileOperations</PackageId>
 	</PropertyGroup>
+
 	<ItemGroup>
 		<Compile Update="Resources\SR.Designer.cs">
 			<DependentUpon>SR.resx</DependentUpon>
@@ -18,4 +20,5 @@
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>
 	</ItemGroup>
+
 </Project>

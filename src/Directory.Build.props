@@ -7,11 +7,14 @@
 
 		<UseWPF>true</UseWPF>
 
-		<Version>0.2.6</Version>
+		<Version>0.1.0</Version>
 
-		<Company>X-Filer</Company>
-		<Product>X-Filer</Product>
+		<Company>Egorozh</Company>
+		<Product>WindowsOperations</Product>
 		<Authors>Egorozh</Authors>
-		
+		<PackageProjectUrl>https://github.com/egorozh/WindowsOperations</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/egorozh/WindowsOperations</RepositoryUrl>
+		<PackageTags>Windows, Files, FileOperations</PackageTags>
+
 	</PropertyGroup>
 </Project>
