@@ -3,7 +3,10 @@
 	<PropertyGroup>
 		<Description>File operations for Windows</Description>
 		<PackageId>Egorozh.Windows.FileOperations</PackageId>
+	
 	</PropertyGroup>
+
+	
 
 	<ItemGroup>
 		<Compile Update="Resources\SR.Designer.cs">
