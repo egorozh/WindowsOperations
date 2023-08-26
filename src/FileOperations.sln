@@ -14,6 +14,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Windows.ImageOperations", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileOperations.Abstractions", "FileOperations.Abstractions\FileOperations.Abstractions.csproj", "{BCA69EB0-2A77-4AEB-86E7-BD523BAECBE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileOperations.MacOs", "FileOperations.MacOs\FileOperations.MacOs.csproj", "{99F29181-3DE2-408A-B751-FBA46220428F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{BCA69EB0-2A77-4AEB-86E7-BD523BAECBE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCA69EB0-2A77-4AEB-86E7-BD523BAECBE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCA69EB0-2A77-4AEB-86E7-BD523BAECBE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99F29181-3DE2-408A-B751-FBA46220428F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F29181-3DE2-408A-B751-FBA46220428F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F29181-3DE2-408A-B751-FBA46220428F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F29181-3DE2-408A-B751-FBA46220428F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
