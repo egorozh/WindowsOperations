@@ -1,3 +1,5 @@
-# WindowsOperations
+# FileOperations
 
-Native windows file and icon operations
+Native file and icon operations for Windows and MacOs
+
+Linux supported in plans
