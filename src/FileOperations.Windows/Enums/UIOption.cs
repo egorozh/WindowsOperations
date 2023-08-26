@@ -1,4 +1,5 @@
-﻿namespace Windows.FileOperations;
+﻿namespace FileOperations.Windows;
+
 
 ///  <summary>
 ///  Specify which UI dialogs to show.

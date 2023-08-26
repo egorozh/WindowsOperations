@@ -1,20 +1,15 @@
 <Project>
 	<PropertyGroup>
-		<TargetFrameworks>net5.0-windows;net6.0-windows</TargetFrameworks>
-
 		<Nullable>Enable</Nullable>
-		<LangVersion>Latest</LangVersion>
-
-		<UseWPF>true</UseWPF>
-
-		<Version>0.1.0</Version>
+		
+		<Version>7.0.0-preview1</Version>
 
 		<Company>Egorozh</Company>
-		<Product>WindowsOperations</Product>
+		<Product>CrossPlatform File Operations</Product>
 		<Authors>Egorozh</Authors>
 		<PackageProjectUrl>https://github.com/egorozh/WindowsOperations</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/egorozh/WindowsOperations</RepositoryUrl>
-		<PackageTags>Windows, Files, FileOperations</PackageTags>
+		<PackageTags>Windows, MacOs, Files, FileOperations, File operations</PackageTags>
 
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>

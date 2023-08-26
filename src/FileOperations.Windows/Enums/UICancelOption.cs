@@ -1,4 +1,4 @@
-﻿namespace Windows.FileOperations;
+﻿namespace FileOperations.Windows;
 
 ///<summary>
 /// Defines option whether to throw exception when user cancels a UI operation or not.

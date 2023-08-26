@@ -1,4 +1,4 @@
-﻿namespace Windows.FileOperations;
+﻿namespace FileOperations.Windows;
 
 internal static class NativeTypes
 {

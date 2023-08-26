@@ -1,4 +1,4 @@
-﻿namespace Windows.FileOperations.FileOperation;
+﻿namespace FileOperations.Windows.FileOperation;
 
 [Flags]
 internal enum FileOperationFlags : uint

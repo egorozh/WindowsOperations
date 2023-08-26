@@ -1,4 +1,4 @@
-﻿namespace Windows.FileOperations;
+﻿namespace FileOperations.Windows;
 
 ///<summary>
 /// Specify whether to perform the search for files/directories recursively or not.

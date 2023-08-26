@@ -1,4 +1,4 @@
-﻿namespace Windows.FileOperations;
+﻿namespace FileOperations.Windows;
 
 [ComVisible(false)]
 internal static class NativeMethods

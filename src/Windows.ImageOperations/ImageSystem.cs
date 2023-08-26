@@ -1,4 +1,8 @@
-﻿namespace Windows.ImageOperations;
+﻿using System.Drawing;
+using System.Drawing.Imaging;
+
+namespace Windows.ImageOperations;
+
 
 public static class ImageSystem
 {
@@ -11,11 +15,11 @@ public static class ImageSystem
 
     #region Public Methods
 
-    public static BitmapImage GetIcon(string fileName, bool isExtraLarge = true)
+    public static Bitmap? GetIcon(string fileName, bool isExtraLarge = true)
     {
         var iIndex = GetIconIndex(fileName);
 
-        var hIcon = isExtraLarge
+        IntPtr hIcon = isExtraLarge
             ? GetJumboIcon(iIndex)
             : GetXlIcon(iIndex);
 
@@ -23,7 +27,7 @@ public static class ImageSystem
 
         Shell32.DestroyIcon(hIcon);
 
-        return bmp.ToBitmapImage();
+        return bmp;
     }
 
     public static async Task<Stream?> GetIconStream(string fileName, bool isExtraLarge = true)
@@ -43,37 +47,37 @@ public static class ImageSystem
 
         return ms;
     }
+    //
+    // public static Stream ToStream(this Bitmap bitmap)
+    // {
+    //     var ms = new MemoryStream();
+    //
+    //     bitmap.Save(ms, ImageFormat.Png);
+    //
+    //     return ms;
+    // }
 
-    public static Stream ToStream(this Bitmap bitmap)
-    {
-        var ms = new MemoryStream();
+    // public static BitmapImage ToBitmapImage(this Bitmap bitmap)
+    // {
+    //     using var ms = new MemoryStream();
+    //
+    //     bitmap.Save(ms, ImageFormat.Png);
+    //
+    //     return FromStream(ms);
+    // }
 
-        bitmap.Save(ms, ImageFormat.Png);
-
-        return ms;
-    }
-
-    public static BitmapImage ToBitmapImage(this Bitmap bitmap)
-    {
-        using var ms = new MemoryStream();
-
-        bitmap.Save(ms, ImageFormat.Png);
-
-        return FromStream(ms);
-    }
-
-    public static BitmapImage FromStream(Stream stream)
-    {
-        stream.Seek(0, SeekOrigin.Begin);
-
-        var bitmapImage = new BitmapImage();
-        bitmapImage.BeginInit();
-        bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-        bitmapImage.StreamSource = stream;
-        bitmapImage.EndInit();
-
-        return bitmapImage;
-    }
+    // public static BitmapImage FromStream(Stream stream)
+    // {
+    //     stream.Seek(0, SeekOrigin.Begin);
+    //
+    //     var bitmapImage = new BitmapImage();
+    //     bitmapImage.BeginInit();
+    //     bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+    //     bitmapImage.StreamSource = stream;
+    //     bitmapImage.EndInit();
+    //
+    //     return bitmapImage;
+    // }
 
     #endregion
 

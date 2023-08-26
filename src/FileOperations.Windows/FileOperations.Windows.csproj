@@ -1,13 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		
 		<Description>File operations for Windows</Description>
-		<PackageId>Egorozh.Windows.FileOperations</PackageId>
+		<PackageId>Egorozh.FileOperations.Windows</PackageId>
+		<RootNamespace>FileOperations.Windows</RootNamespace>
 	
 	</PropertyGroup>
 
 	
-
 	<ItemGroup>
 		<Compile Update="Resources\SR.Designer.cs">
 			<DependentUpon>SR.resx</DependentUpon>
@@ -22,6 +24,10 @@
 			<LastGenOutput>SR.Designer.cs</LastGenOutput>
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\FileOperations.Abstractions\FileOperations.Abstractions.csproj" />
 	</ItemGroup>
 
 </Project>

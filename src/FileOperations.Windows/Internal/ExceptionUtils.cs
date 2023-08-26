@@ -1,4 +1,6 @@
-﻿namespace Windows.FileOperations;
+﻿using FileOperations.Windows.Resources;
+
+namespace FileOperations.Windows;
 
 internal static class ExceptionUtils
 {

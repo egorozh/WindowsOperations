@@ -1,4 +1,5 @@
-﻿namespace Windows.FileOperations;
+﻿namespace FileOperations.Abstractions.Enums;
+
 
 /// <summary>
 /// Specify whether to delete a file / directory to Recycle Bin or not.

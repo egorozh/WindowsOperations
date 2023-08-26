@@ -1,8 +1,13 @@
-﻿using Windows.FileOperations.FileOperation;
+﻿using FileOperations.Abstractions;
+using FileOperations.Abstractions.Enums;
+using FileOperations.Windows.FileOperation;
+using FileOperations.Windows.Resources;
 
-namespace Windows.FileOperations;
 
-public class FileSystemEx
+namespace FileOperations.Windows;
+
+
+public class WindowsFileOperations : IFileOperations
 {
     private static readonly char[] MSeparatorChars =
     {
@@ -10,7 +15,49 @@ public class FileSystemEx
         Path.AltDirectorySeparatorChar,
         Path.VolumeSeparatorChar
     };
+    
 
+    void IFileOperations.DeleteDirectory(string directory, DeleteDirectoryOption onDirectoryNotEmpty, RecycleOption recycle)
+    {
+        VerifyDeleteDirectoryOption(nameof(onDirectoryNotEmpty), onDirectoryNotEmpty);
+        VerifyRecycleOption(nameof(recycle), recycle);
+        
+        string fullPath = Path.GetFullPath(directory);
+        
+        ThrowIfDevicePath(fullPath);
+        
+        if (!Directory.Exists(fullPath))
+            throw ExceptionUtils.GetDirectoryNotFoundException(SR.IO_DirectoryNotFound_Path, directory);
+        
+        if (IsRoot(fullPath))
+            throw ExceptionUtils.GetIoException(SR.IO_DirectoryIsRoot_Path, directory);
+        
+        if (recycle == RecycleOption.SendToRecycleBin)
+            ShellDelete(fullPath, UiOptionInternal.NO_UI, recycle, UICancelOption.ThrowException, FileOrDirectory.Directory);
+        else
+            Directory.Delete(fullPath, onDirectoryNotEmpty == DeleteDirectoryOption.DeleteAllContents);
+    }
+
+
+    void IFileOperations.DeleteFile(string file, RecycleOption recycle)
+    {
+        VerifyRecycleOption(nameof(recycle), recycle);
+       
+        string str = NormalizeFilePath(file, nameof(file));
+        
+        ThrowIfDevicePath(str);
+        
+        if (!File.Exists(str))
+            throw ExceptionUtils.GetFileNotFoundException(file, "Could not find file '{0}'.", file);
+        
+        if (recycle == RecycleOption.SendToRecycleBin)
+            ShellDelete(str, UiOptionInternal.NO_UI, recycle, UICancelOption.ThrowException, FileOrDirectory.File);
+        else
+            File.Delete(str);
+    }
+    
+    
+    
     #region Public Methods
 
     public static string GetParentPath(string path)
