@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using AppKit;
 using FileOperations.Abstractions;
 using FileOperations.Abstractions.Enums;
 using Foundation;
@@ -8,14 +7,8 @@ using Foundation;
 namespace FileOperations.MacOs;
 
 
-/// <summary>
-/// Use <see cref="Initialize"/> for working api
-/// </summary>
 public class MacOsFileOperations : IFileOperations
 {
-    public static void Initialize() => NSApplication.Init();
-
-
     public void DeleteDirectory(string directory, DeleteDirectoryOption onDirectoryNotEmpty,
         RecycleOption recycle = RecycleOption.DeletePermanently)
     {

@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<Nullable>Enable</Nullable>
 		
-		<Version>7.0.0-preview1</Version>
+		<Version>8.0.0-preview1</Version>
 
 		<Company>Egorozh</Company>
 		<Product>CrossPlatform File Operations</Product>
