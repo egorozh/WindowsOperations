@@ -1,31 +1,33 @@
 <Project>
-	<PropertyGroup>
-		<Nullable>Enable</Nullable>
-		
-		<Version>8.0.0-preview2</Version>
+    <PropertyGroup>
+        <Nullable>Enable</Nullable>
 
-		<Company>Egorozh</Company>
-		<Product>CrossPlatform File Operations</Product>
-		<Authors>Egorozh</Authors>
-		<PackageProjectUrl>https://github.com/egorozh/WindowsOperations</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/egorozh/WindowsOperations</RepositoryUrl>
-		<PackageTags>Windows, MacOs, Files, FileOperations, File operations</PackageTags>
+        <IsAotCompatible>true</IsAotCompatible>
+        
+        <Version>8.0.0-preview4</Version>
 
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-	</PropertyGroup>
+        <Company>Egorozh</Company>
+        <Product>CrossPlatform File Operations</Product>
+        <Authors>Egorozh</Authors>
+        <PackageProjectUrl>https://github.com/egorozh/FileOperations</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/egorozh/FileOperations</RepositoryUrl>
+        <PackageTags>Windows, MacOs, Files, FileOperations, File operations</PackageTags>
 
-	<ItemGroup>
-		<None Include="..\..\LICENSE">
-			<Pack>True</Pack>
-			<PackagePath></PackagePath>
-		</None>
-	</ItemGroup>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<None Include="..\..\README.md">
-			<Pack>True</Pack>
-			<PackagePath></PackagePath>
-		</None>
-	</ItemGroup>
+    <ItemGroup>
+        <None Include="..\..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath />
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath />
+        </None>
+    </ItemGroup>
 </Project>

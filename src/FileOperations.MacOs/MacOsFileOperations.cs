@@ -1,21 +1,13 @@
 ﻿using System.IO;
-using AppKit;
+using System.Linq;
 using FileOperations.Abstractions;
 using FileOperations.Abstractions.Enums;
 using Foundation;
 
-
 namespace FileOperations.MacOs;
 
-
-/// <summary>
-/// Use <see cref="Initialize"/> for working api
-/// </summary>
 public class MacOsFileOperations : IFileOperations
 {
-    public static void Initialize() => NSApplication.Init();
- 
-    
     public void DeleteDirectory(string directory, DeleteDirectoryOption onDirectoryNotEmpty,
         RecycleOption recycle = RecycleOption.DeletePermanently)
     {
@@ -40,6 +32,12 @@ public class MacOsFileOperations : IFileOperations
         File.Delete(file);
     }
 
+    public string[] GetLogicalDrives()
+    {
+        string driveName = Directory.GetLogicalDrives().First();
+
+        return [driveName];
+    }
 
     private void MoveToRecycleBin(string path, bool isDir)
     {
@@ -47,7 +45,6 @@ public class MacOsFileOperations : IFileOperations
 
         var url = new NSUrl(path, isDir: isDir);
 
-        if (url is not null)
-            fileManager.TrashItem(url, out var res, out var error);
+        fileManager.TrashItem(url, out var res, out var error);
     }
 }

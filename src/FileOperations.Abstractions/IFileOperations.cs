@@ -10,4 +10,7 @@ public interface IFileOperations
     
     
     void DeleteFile(string file, RecycleOption recycle);
+
+    
+    string[] GetLogicalDrives();
 }
