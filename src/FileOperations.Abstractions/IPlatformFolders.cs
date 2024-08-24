@@ -1,6 +1,6 @@
 namespace FileOperations.Abstractions;
 
-public interface IPlatformFoldersProvider
+public interface IPlatformFolders
 {
     /// <summary>
     /// <para>

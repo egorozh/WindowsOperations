@@ -3,7 +3,7 @@ using Microsoft.Win32;
 
 namespace FileOperations.Windows;
 
-public class WindowsPlatformFoldersProvider : IPlatformFoldersProvider
+public class WindowsPlatformFolders : IPlatformFolders
 {
     public string GetAppDataPath() => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 

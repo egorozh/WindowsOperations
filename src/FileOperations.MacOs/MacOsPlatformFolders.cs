@@ -4,7 +4,7 @@ using FileOperations.Abstractions;
 
 namespace FileOperations.MacOs;
 
-public class MacOsPlatformFoldersProvider : IPlatformFoldersProvider
+public class MacOsPlatformFolders : IPlatformFolders
 {
     public string GetAppDataPath()
     {
